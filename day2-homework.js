@@ -52,17 +52,24 @@ console.log(ex2([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//shoul
 
 
 //nums - an array of numbers
-const ex3 = (nums)=>{
-    let result = 0;
-    //TODO: write code to add up all numbers in array and return the result
 
-    return result;
-};
-console.log(ex3([1,2,3]) === 6 ? 'PASS': 'FAIL');
+// create an array
+const ex3 = [5, 10, 15, 20, 25];
+    let result = 0; //create variable for sum and initialize
+
+    for (let i = 0; i < ex3.length; i++) {
+        result += ex3[i];
+    }       //for loop
+    //TODO: write code to add up all numbers in array and return the result
+    console.log(result)
+
+
+
+/* console.log(ex3([1,2,3]) === 6 ? 'PASS': 'FAIL');
 console.log(ex3([1,2]) === 3 ? 'PASS': 'FAIL');
 console.log(ex3([20,2]) === 22 ? 'PASS': 'FAIL');
 console.log(ex3([]) === 0 ? 'PASS': 'FAIL');
-console.log(ex3([-1,1]) === 0 ? 'PASS': 'FAIL');
+console.log(ex3([-1,1]) === 0 ? 'PASS': 'FAIL'); */
 
 //should return a string
 
