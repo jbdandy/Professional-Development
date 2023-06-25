@@ -43,12 +43,15 @@ const ex2 = (arr, val)=>{
     //If in ex1 you used the array method then use a loop here for you answer
 }
 
+
 console.log(ex2([1,2,3],6) === false ? 'PASS': 'FAIL');//should return false
 console.log(ex2([1,2,3],2) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex2([1,2,3],1) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex2([1,2,3],3) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex2([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//should return true
 */
+
+const ex2 = [1,2,3,4,5];
 
 
 //nums - an array of numbers
@@ -74,23 +77,42 @@ console.log(ex3([-1,1]) === 0 ? 'PASS': 'FAIL'); */
 //should return a string
 
 
-/*
-const ex4 = (num)=>{
-    // Given a number, num do the following
+
+const ex4 = (8);{
+
+if (ex4 % 2 == 0)
+{
+    alert('cat');
+}
+else if (ex4 % 3 == 0)
+{
+    alert('dog');
+}
+else 
+{
+    alert('catdog');
+}
+
+
+}
+/*    // Given a number, num do the following
     //If the number is divisible by 2 return "cat"
     //If the number is divisible by 3 return "dog"
     //If the number is divisible by 2 and 3 return "catdog"
     //ex: input:9, output: "dog"
     //ex: input:4, output: "cat"
     //ex: input:12, output: "catdog"
-}
+    */
+
+/*
 console.log(ex4(9) === 'dog' ? 'PASS': 'FAIL');
 console.log(ex4(4) === 'cat' ? 'PASS': 'FAIL');
 console.log(ex4(12) === 'catdog' ? 'PASS': 'FAIL');
-*/
+
 
 /*
 //nums - an array of numbers
+
 const ex5 = (nums)=>{
     //Using your solution in ex4 without re-writing it, process the list of numbers, nums, by
     //return an array of the answers "cat","dog","catdog" using the sames rules - see test cases for example
