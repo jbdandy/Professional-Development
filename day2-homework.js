@@ -11,9 +11,18 @@ To debug you can comment out various exercises. Skip around as some are easier t
 // arr - an array of numbers, ex: [1,2,3],
 // val - a number
 //returns a boolean
-const ex1 = (arr, val)=>{
+//const ex1 = (arr, val)=>{
     //TODO: write code that returns true if the value is found in the array, if it is not found return false
-}
+
+    const ex1 = [1,3,5,7,9,11]; // JD
+    
+    console.log(ex1.includes(3));   // JD
+    console.log(ex1.includes(11));  // JD
+    console.log(ex1.includes(14));  // JD
+    console.log(ex1.includes(7));   // JD
+//}
+
+/*
 console.log(ex1([1,2,3],6) === false ? 'PASS': 'FAIL');//should return false
 console.log(ex1([1,2,3],2) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex1([1,2,3],1) === true ? 'PASS': 'FAIL');//should return true
@@ -25,16 +34,21 @@ console.log(ex1([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//shoul
 // arr - an array of numbers, ex: [1,2,3],
 // val - a number
 //returns a boolean
+*/
+
+/*
 const ex2 = (arr, val)=>{
     //TODO: write code that returns true if the value is found in the array, if it is not found return false
     //If in ex1 you used a loop, then in this answer use the method on the array to search for the value; 
     //If in ex1 you used the array method then use a loop here for you answer
 }
+
 console.log(ex2([1,2,3],6) === false ? 'PASS': 'FAIL');//should return false
 console.log(ex2([1,2,3],2) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex2([1,2,3],1) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex2([1,2,3],3) === true ? 'PASS': 'FAIL');//should return true
 console.log(ex2([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//should return true
+*/
 
 
 //nums - an array of numbers
@@ -51,6 +65,9 @@ console.log(ex3([]) === 0 ? 'PASS': 'FAIL');
 console.log(ex3([-1,1]) === 0 ? 'PASS': 'FAIL');
 
 //should return a string
+
+
+/*
 const ex4 = (num)=>{
     // Given a number, num do the following
     //If the number is divisible by 2 return "cat"
@@ -63,7 +80,9 @@ const ex4 = (num)=>{
 console.log(ex4(9) === 'dog' ? 'PASS': 'FAIL');
 console.log(ex4(4) === 'cat' ? 'PASS': 'FAIL');
 console.log(ex4(12) === 'catdog' ? 'PASS': 'FAIL');
+*/
 
+/*
 //nums - an array of numbers
 const ex5 = (nums)=>{
     //Using your solution in ex4 without re-writing it, process the list of numbers, nums, by
@@ -77,3 +96,4 @@ const ex5 = (nums)=>{
     return result;
 }
 console.log(ex5([9,4,12]) === ['dog','cat','catdog'] ? 'PASS': 'FAIL');
+*/
