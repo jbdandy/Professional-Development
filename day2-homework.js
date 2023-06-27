@@ -10,22 +10,28 @@ To debug you can comment out various exercises. Skip around as some are easier t
 
 // arr - an array of numbers, ex: [1,2,3],
 // val - a number
-//returns a boolean
+//returns a boolean (true or false)
 const ex1 = (arr, val)=>{
     //TODO: write code that returns true if the value is found in the array, if it is not found return false
+
+
 }
-console.log(ex1([1,2,3],6) === false ? 'PASS': 'FAIL');//should return false
-console.log(ex1([1,2,3],2) === true ? 'PASS': 'FAIL');//should return true
-console.log(ex1([1,2,3],1) === true ? 'PASS': 'FAIL');//should return true
-console.log(ex1([1,2,3],3) === true ? 'PASS': 'FAIL');//should return true
-console.log(ex1([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//should return true
+
+console.log(ex1([1,5,7,9,11],2) === false ? 'PASS': 'FAIL');      //entered code - JD
+
+
+//console.log(ex1([1,2,3],6) === false ? 'PASS': 'FAIL');//should return false
+//console.log(ex1([1,2,3],2) === true ? 'PASS': 'FAIL');//should return true
+//console.log(ex1([1,2,3],1) === true ? 'PASS': 'FAIL');//should return true
+//console.log(ex1([1,2,3],3) === true ? 'PASS': 'FAIL');//should return true
+//console.log(ex1([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//should return true
 
 
 
 // arr - an array of numbers, ex: [1,2,3],
 // val - a number
 //returns a boolean
-const ex2 = (arr, val)=>{
+/* const ex2 = (arr, val)=>{
     //TODO: write code that returns true if the value is found in the array, if it is not found return false
     //If in ex1 you used a loop, then in this answer use the method on the array to search for the value; 
     //If in ex1 you used the array method then use a loop here for you answer
@@ -77,3 +83,4 @@ const ex5 = (nums)=>{
     return result;
 }
 console.log(ex5([9,4,12]) === ['dog','cat','catdog'] ? 'PASS': 'FAIL');
+*/
