@@ -88,13 +88,16 @@ else if (ex4 % 3 == 0)
 {
     alert('dog');
 }
-else 
+else (ex4 % 2 == 0 && ex4 % 3 == 0)
 {
     alert('catdog');
 }
 
 
 }
+console.log(alert)
+
+
 /*    // Given a number, num do the following
     //If the number is divisible by 2 return "cat"
     //If the number is divisible by 3 return "dog"
@@ -119,10 +122,11 @@ const ex5 = (nums)=>{
     //hint: will need a loop here
     let result = [];
 
-    //TODO: write the code here
+    //TODO: write the code here */
 
+    
 
-    return result;
+  /*  return result;
 }
 console.log(ex5([9,4,12]) === ['dog','cat','catdog'] ? 'PASS': 'FAIL');
 */
