@@ -52,6 +52,11 @@ console.log(ex2([13,233,4443,444444343],4443) === true ? 'PASS': 'FAIL');//shoul
 */
 
 const ex2 = [1,2,3,4,5];
+function arraycheck () {
+    for
+    if
+    else
+    }
 
 
 //nums - an array of numbers
@@ -92,7 +97,6 @@ else (ex4 % 2 == 0 && ex4 % 3 == 0)
 {
     alert('catdog');
 }
-
 
 }
 console.log(alert)
