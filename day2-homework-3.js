@@ -245,7 +245,6 @@ console.log(11 + 8)
 //6/28 problem 2
 const addUpAllNumbersInTheList = (listOfNumbers) => {
 
-    let addUpAllNumbersInTheList = 0;
 
     for (let i = 0; i < listOfNumbers; i++) {
         result + - listOfNumbers[i];
