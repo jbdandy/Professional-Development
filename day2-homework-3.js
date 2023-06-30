@@ -236,27 +236,42 @@ console.log(ex5([9,4,12]) === ['dog','cat','catdog'] ? 'PASS': 'FAIL');
 //6/28 problem 1
  const addTwoNumbers = (number1, number2) => {
     //return the result - hint: will most likely be a single line of code
-    let sum = number1 + number2;
+    return number1 + number2;
 };
-console.log(11 + 8)
 
+console.log(addTwoNumbers(11, 8));
 
 
 //6/28 problem 2
 const addUpAllNumbersInTheList = (listOfNumbers) => {
-
-
-    for (let i = 0; i < listOfNumbers; i++) {
-        result + - listOfNumbers[i];
+    let result = 0;
+    
+    for (let i = 0; i < listOfNumbers.length; i++) {
+        result += listOfNumbers[i];    
     }
+
+    return result;
 }
 
 //assume at least 2 numbers in list
 console.log(addUpAllNumbersInTheList([4, 6]));//should print 10 when completed
 
+
     //6/28 problem 3 - extra credit
 //extra credit: what if theres zero numbers in list? what if only one number in list?
+const addUpAllNumbersInTheListv3 = (listOfNumbers) => {
+    let result = 0;
+    
+    for (let i = 0; i < listOfNumbers.length; i++) {
+        result += listOfNumbers[i];    
+    }
 
+    return result;
+}
+
+
+//assume at least 2 numbers in list
+console.log(addUpAllNumbersInTheListv3([4, 6]));//should print 10 when completed
 
 
 
