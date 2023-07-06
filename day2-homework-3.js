@@ -247,14 +247,16 @@ const addUpAllNumbersInTheList = (listOfNumbers) => {
     let result = 0;
     
     for (let i = 0; i < listOfNumbers.length; i++) {
-        result += listOfNumbers[i];    
+        // result += listOfNumbers[i]; //adds the current number at i to the result   // replace this line, use the addTwoNumbers function
+        // result = result + listOfNumbers[i]; //sets the result equal to the sum of result plus current number //same as above line
+        result = addTwoNumbers(result, listOfNumbers[i]);//what 2  numbers do we want to add together?
     }
 
     return result;
 }
 
 //assume at least 2 numbers in list
-console.log(addUpAllNumbersInTheList([4, 6]));//should print 10 when completed
+console.log(addUpAllNumbersInTheList([4, 6, 8, 33333, 22222]));//should print 10 when completed
 
 
     //6/28 problem 3 - extra credit
