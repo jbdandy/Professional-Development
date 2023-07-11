@@ -20,6 +20,7 @@ const findMinimum = (listOfNumbers) => {
 findMinimum([3, 8, 21, 34]);
 
 
+
 /*
 example 1:
 input: []
@@ -47,6 +48,8 @@ const twoSum = (listOfNumbers, x) => {
 
     //loop 1 - start at first element in list
     const currentValueA = ?;//first item in list
+
+    
     //loop 2 - start at second in list
     const currentValueB = ?;//second item in list
 
