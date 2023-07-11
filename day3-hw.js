@@ -1,14 +1,25 @@
 const findMinimum = (listOfNumbers)=>{
     //if no numbers in list return -1;
+
+    if (listOfNumbers === 0);{
+        return -1;
+    }
     //otherwise return the smallest number
+    let min = 0;
+    for (let i = 0; i < listOfNumbers.length; i++){
+        const currentOne = listOfNumbers[i];
+        console.log (currentOne);
+        if (currentOne < min) {
+            min = currentOne;
+        }
+    }
+    return min;
 
     //check each number in list
 
         //is current number less than the minimum
         //yes: update minimum
         //no: do nothing
-    
-
 }
 
 /*
