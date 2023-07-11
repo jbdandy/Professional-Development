@@ -39,15 +39,15 @@ output: 1
 //Paste your solution into here to test it: https://leetcode.com/problems/two-sum/
 //Given a list are there 2 numbers that add to x; if there is two numbers that add to x return true, otherwise false
 const twoSum = (listOfNumbers, x) => {
-    //let result = false;
+    let result = false;
 
-    let result = [];
-    for (let i = 0; i < listOfNumbers.length; i++){
-        for (let j = i + 1; j < listOfNumbers.length){
+
+    for (let i = 0; i < listOfNumbers.length; i++) {
+        for (let j = i + 1; j < listOfNumbers.length;) {
             if (listOfNumbers[i]) + (listOfNumbers[j]) === x
             result.push(i);
             result.push(j);
-            console.log (result);
+            console.log(result);
         }
     }
 
@@ -78,8 +78,12 @@ const twoSum = (listOfNumbers, x) => {
 //input: "happy birthday jane"
 //output: 3
 const countNumberOfWords = (sentence) => {
-    //how do you determine where one word starts and the other ends?
+    //how do you determine where one word starts and the other ends? with a space " "
     //hint: you will have to check every character in the sentence
+
+
+
+    
 
 }
 //Bonus: Try and solve: https://leetcode.com/problems/length-of-last-word/
