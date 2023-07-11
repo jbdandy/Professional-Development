@@ -39,7 +39,17 @@ output: 1
 //Paste your solution into here to test it: https://leetcode.com/problems/two-sum/
 //Given a list are there 2 numbers that add to x; if there is two numbers that add to x return true, otherwise false
 const twoSum = (listOfNumbers, x) => {
-    let result = false;
+    //let result = false;
+
+    let result = [];
+    for (let i = 0; i < listOfNumbers.length; i++){
+        for (let j = i + 1; j < listOfNumbers.length){
+            if (listOfNumbers[i]) + (listOfNumbers[j]) === x
+            result.push(i);
+            result.push(j);
+            console.log (result);
+        }
+    }
 
 
 
@@ -49,7 +59,7 @@ const twoSum = (listOfNumbers, x) => {
     //loop 1 - start at first element in list
     const currentValueA = ?;//first item in list
 
-    
+
     //loop 2 - start at second in list
     const currentValueB = ?;//second item in list
 
@@ -58,6 +68,11 @@ const twoSum = (listOfNumbers, x) => {
 
     return result;
 }
+
+
+
+
+
 
 //returns the number of words in the sentence
 //input: "happy birthday jane"
