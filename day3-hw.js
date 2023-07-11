@@ -43,13 +43,28 @@ const twoSum = (listOfNumbers, x) => {
 
 
     for (let i = 0; i < listOfNumbers.length; i++) {
-        for (let j = i + 1; j < listOfNumbers.length;) {
+        for (let j = (i + 1); j < listOfNumbers.length; j++) {
             if (listOfNumbers[i]) + (listOfNumbers[j]) === x
             result.push(i);
             result.push(j);
             console.log(result);
         }
     }
+
+
+    // const twoSum = (listOfNumbers, x) => {
+    //     let result = false;
+    
+    
+    //     for (let i = 0; i < listOfNumbers.length; i++) {
+    //         for (let j = (i + 1); j < listOfNumbers.length; j++) {
+    //             if (listOfNumbers[i]) + (listOfNumbers[j]) === x
+    //             return true;
+    
+    //         }
+    //     }
+    // }
+    // return false;
 
 
 
@@ -83,7 +98,7 @@ const countNumberOfWords = (sentence) => {
 
 
 
-    
+
 
 }
 //Bonus: Try and solve: https://leetcode.com/problems/length-of-last-word/
