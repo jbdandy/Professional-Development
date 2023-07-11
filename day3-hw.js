@@ -7,7 +7,7 @@ const findMinimum = (listOfNumbers) => {
     //otherwise return the smallest number
     let min = 0;
 
-    for (let i = 0; i < listOfNumbers.length;i++) { //check each number in list,  //is current number less than the minimum
+    for (let i = 0; i < listOfNumbers.length; i++) { //check each number in list,  //is current number less than the minimum
         const currentOne = listOfNumbers[i];
         console.log(currentOne);
         if (currentOne < min) {
@@ -17,11 +17,8 @@ const findMinimum = (listOfNumbers) => {
     return min;
 }
 
-    
+findMinimum([3, 8, 21, 34]);
 
-   
-   
- 
 
 /*
 example 1:
