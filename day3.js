@@ -11,7 +11,7 @@ const findMaximum = (listOfNumbers)=>{
     //otherwise return max value
     //need to check every number is list and determine which is highest/largest
   
-    let max = 0;
+    let max = Number.MIN_SAFE_INTEGER;
     for (let i = 0; i < listOfNumbers.length;i++){
         //current one
         const currentOne = listOfNumbers[i];
