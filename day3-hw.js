@@ -126,29 +126,92 @@ const countNumberOfWords = (sentence) => {
 
 
 ////////////////////////////////////////////////////////////
-
-const lengthOfLastWord = (sentence) => {
+//example: "happy birthday jane!"
+/*
+    To exit a loop early use the keyword: break;
+    To skip to the next iteration of a loop use the keyword: continue;
+*/
+const lengthOfFirstWord = (sentence) => {
     //write bonus code here
-    if(sentence.length === 0){
+   
+    if (sentence.length === 0) {
         return 0;
     }
-    
-    let count = 0;
-    x = a.trim();
 
-    for (let i = 0; i < x.length; i++){
-        if (x[i] == ' ') {
-            count = 0;
+    let count = 0;         //0, 1, 2, 3, 4, 5, 6                         // create a variable to keep count of characters
+    for (let i = 0; i < sentence.length; i++) { //i=5  //start at index 0, if i is less than the length of sentence which is 0, 0 < 20
+        const currentChar = sentence.substr(i, 1);//h,a,p,p,y," ", - same as sentence[i]
+        if (currentChar === " ") {// " " === " " yes/no? yes
+            //stop traversing the string - don't update count
+            break;
         }
-        else {
-            count++;
-        }
+        count = count + 1;//0+1=1, 1+1, 3+1=4, 4+1 = 5, 5+1=6
+    }
+    return count;//<---6
+}
+
+
+//"a". length of 1, index 0 is a
+//example: "happy birthday jane"
+const lengthOfLastWord = (sentence) => {
+    //write bonus code here
+   
+    if (sentence.length === 0) {
+        return 0;
     }
 
+    let count = 0;  
+    //sentence= "abc", length=3, sentence[3 - 1]=sentence[2]=c=sentence[sentence.length-1 -1]
+    //           012
+    for (let i = sentence.length - 1; i >= 0; i--) {//<------(start, when stop, what to visit next (next index, previous index, every other, etc))
+        const currentChar = sentence.substr(i, 1);
+        if (currentChar === " ") {
+            //stop traversing the string - don't update count
+            break;
+        }
+        count = count + 1;
+    }
     return count;
 }
 
 console.log(count);
+
+//console.log print length of every word
+const lengthOfEveryWord = (sentence)=>{
+    if (sentence.length === 0){
+        return 0;
+    }
+
+    let count  = 0;
+
+    for (let i = 0; i < sentence.length; i++){
+        const currentChar = sentence.substr(i, 1);   //substr(where to start, how many characters to visit)
+        if (currentChar === " ") {
+            //end counting of current word
+            
+            //print current word count
+            console.log(count);
+            //start new word count - is there a different way to say this
+             
+        }
+    }
+
+}
+
+//hints: how would we reset count for each word?
+//hints: when do we want to update the count?
+
+
+
+
+
+
+
+
+
+
+
+
 
     // if (sentence.length === 0) {
     //     return 0;
