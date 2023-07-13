@@ -124,20 +124,42 @@ const countNumberOfWords = (sentence) => {
 
 }
 
+
 ////////////////////////////////////////////////////////////
 
 const lengthOfLastWord = (sentence) => {
     //write bonus code here
-    if (sentence.length === 0) {
+    if(sentence.length === 0){
         return 0;
-    }                                //use .slice to get last word, count word length
-    let count = 0;
-    for (let i = 0; i < sentence.length; i++) {
-        if
     }
-    return count;
+    
+    let count = 0;
+    x = a.trim();
 
+    for (let i = 0; i < x.length; i++){
+        if (x[i] == ' ') {
+            count = 0;
+        }
+        else {
+            count++;
+        }
+    }
+
+    return count;
 }
+
+console.log(count);
+
+    // if (sentence.length === 0) {
+    //     return 0;
+    // }                                //use .slice to get last word, count word length
+    // let count = 0;
+    // for (let i = 0; i < sentence.length; i++) {
+    //     if
+    // }
+    // return count;
+
+//}
 
 //Bonus: Return the length of the last word: Try and solve: https://leetcode.com/problems/length-of-last-word/
 //hints:
