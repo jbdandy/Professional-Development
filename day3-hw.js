@@ -130,13 +130,10 @@ const lengthOfLastWord = (sentence) => {
     //write bonus code here
     if (sentence.length === 0) {
         return 0;
-    }                                //use .slice to get last word, count word length, return length
+    }                                //use .slice to get last word, count word length
     let count = 0;
     for (let i = 0; i < sentence.length; i++) {
-        const lastWordLength = sentence.substr(i, -1);
-        if (lastWordLength === " ") {
-            count = 
-        }
+        if
     }
     return count;
 
@@ -146,7 +143,7 @@ const lengthOfLastWord = (sentence) => {
 //hints:
 //1 - use what you know from countNumberOfWords problem
 //2 - keep track of length of each word
-//3 - to track length use a new variable that is a counter, rest counter once you hit the next word,
+//3 - to track length use a new variable that is a counter, reset counter once you hit the next word,
 //at end of the sentence your count will be the length of the last word
 //Return the length of the last word
 
