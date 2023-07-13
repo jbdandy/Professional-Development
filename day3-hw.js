@@ -18,7 +18,7 @@ const findMinimum = (listOfNumbers) => {
 
 const result = findMinimum([41, 8, 21, 34]);
 
-console.log (result);
+console.log(result);
 
 
 /*
@@ -51,7 +51,7 @@ const twoSum = (listOfNumbers, x) => {
     // }
 
     for (let i = 0; i < listOfNumbers.length - 1; i++) {
-        for (let j = i+1; j < listOfNumbers.length; j++) {
+        for (let j = i + 1; j < listOfNumbers.length; j++) {
             if ((listOfNumbers[i] + listOfNumbers[j]) === x)
                 return true;
 
@@ -62,10 +62,10 @@ const twoSum = (listOfNumbers, x) => {
 
     //leetcode solution
     for (let i = 0; i < nums.length - 1; i++) {
-        for (let j = i+1; j < nums.length; j++) {
+        for (let j = i + 1; j < nums.length; j++) {
             const temp = nums[i] + nums[j];
-            if (temp === target){
-                return [i,j];
+            if (temp === target) {
+                return [i, j];
             }
         }
     }
@@ -105,36 +105,42 @@ const countNumberOfWords = (sentence) => {
     //how do you determine where one word starts and the other ends? with a space " "
     //hint: you will have to check every character in the sentence
 
-   
-    if (sentence.length === 0){ 
+
+    if (sentence.length === 0) {
         return 0;
     }
-    
+
     let count = 1;         // current value set to 1                          // create a variable is trying to keep count
-    for (let i = 0; i < sentence.length;i++) { //start at index 0, if i is less than the length of sentence which is 0
-       
-        const currentValue = sentence.substr(i,1);
-        if (currentValue === " "){
+    for (let i = 0; i < sentence.length; i++) { //start at index 0, if i is less than the length of sentence which is 0
+
+        const currentValue = sentence.substr(i, 1);
+        if (currentValue === " ") {
             //currentValue is a space - counting spaces
-            count = count + 1; 
+            count = count + 1;
         }
-     
+
     }
     return count;
 
 }
 
-
-
+////////////////////////////////////////////////////////////
 
 const lengthOfLastWord = (sentence) => {
-   //write bonus code here
+    //write bonus code here
+    if (sentence.length === 0) {
+        return 0;
+    }                                //use .slice to get last word, count word length, return length
+    let count = 0;
+    for (let i = 0; i < sentence.length; i++) {
+        const lastWordLength = sentence.substr(i, -1);
+        if (lastWordLength === " ") {
+            count = 
+        }
+    }
+    return count;
 
 }
-
-
-
-
 
 //Bonus: Return the length of the last word: Try and solve: https://leetcode.com/problems/length-of-last-word/
 //hints:
