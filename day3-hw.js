@@ -110,7 +110,7 @@ const countNumberOfWords = (sentence) => {
         return 0;
     }
 
-    let count = 1;         // current value set to 1                          // create a variable is trying to keep count
+    let count = 1;         // current value set to 1                          // create a variable to keep count
     for (let i = 0; i < sentence.length; i++) { //start at index 0, if i is less than the length of sentence which is 0
 
         const currentValue = sentence.substr(i, 1);
@@ -177,7 +177,3 @@ console.log(count);
 
 //Extra Credit: https://leetcode.com/problems/roman-to-integer/
 //hints: use lots of if statements
-
-//estimate:  less than 20 if statements
-
-//goal - return 2023
