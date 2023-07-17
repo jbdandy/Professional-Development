@@ -182,14 +182,14 @@ const text = "i am trying to figure this out"
 
 const lengthOfEveryWord = (str) => {
     let leng = [];
-    let word = str.split(" ");
+    let word = str.split(" ");              //use split or slice???
     for (let i = 0; i < word.length; i++){
-        leng.push(word[i].length);
+        leng.push(word[i].length);          //adds new items to end of an array
     }
     return leng;
 }
 
-console.log(lengthOfEveryWord(text));
+console.log(lengthOfEveryWord('i am trying to figure this out'));
 
 
 // const lengthOfEveryWord = (sentence)=>{
