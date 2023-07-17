@@ -202,17 +202,6 @@ const lengthOfEveryWord = (sentence)=>{
 //hints: when do we want to update the count?
 
 
-
-
-
-
-
-
-
-
-
-
-
     // if (sentence.length === 0) {
     //     return 0;
     // }                                //use .slice to get last word, count word length
@@ -240,3 +229,18 @@ const lengthOfEveryWord = (sentence)=>{
 
 //Extra Credit: https://leetcode.com/problems/roman-to-integer/
 //hints: use lots of if statements
+
+const(romanToInteger) => () => {
+    let array = ["I", "V", "X", "L", "C"];
+    let values = {
+        I : 1,
+        V : 5,
+        X : 10,
+        L : 50, 
+        C : 100
+    }
+
+    let sum = 0;
+
+    for (let i = )
+}
