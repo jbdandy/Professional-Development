@@ -177,26 +177,44 @@ const lengthOfLastWord = (sentence) => {
 console.log(count);
 
 //console.log print length of every word
-const lengthOfEveryWord = (sentence)=>{
-    if (sentence.length === 0){
-        return 0;
+
+const text = "i am trying to figure this out"
+
+const lengthOfEveryWord = (str) => {
+    let leng = [];
+    let word = str.split(" ");
+    for (let i = 0; i < word.length; i++){
+        leng.push(word[i].length);
     }
-
-    let count  = 0;
-
-    for (let i = 0; i < sentence.length; i++){
-        const currentChar = sentence.substr(i, 1);   //substr(where to start, how many characters to visit)
-        if (currentChar === " ") {
-            //end counting of current word
-            
-            //print current word count
-            console.log(count);
-            //start new word count - is there a different way to say this
-             
-        }
-    }
-
+    return leng;
 }
+
+console.log(lengthOfEveryWord(text));
+
+
+// const lengthOfEveryWord = (sentence)=>{
+//     if (sentence.length === 0){
+//         return 0;
+//     }
+
+//     let count  = 0;
+
+//     for (let i = 0; i < sentence.length; i++){
+//         const currentChar = sentence.substr(i, 1);   //substr(where to start, how many characters to visit)
+//         if (currentChar === " ") {
+//             //end counting of current word
+//             break;
+//             count = count + 1;
+
+//             return count;
+//             //print current word count
+//             console.log(count);
+//             //start new word count - is there a different way to say this
+             
+//         }
+//     }
+
+// }
 
 //hints: how would we reset count for each word?
 //hints: when do we want to update the count?
