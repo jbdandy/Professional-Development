@@ -18,7 +18,7 @@ const findMinimum = (listOfNumbers) => {
 
 const result = findMinimum([41, 8, 21, 34]);
 
-console.log(result);
+// console.log(result);
 
 
 /*
@@ -133,7 +133,7 @@ const countNumberOfWords = (sentence) => {
 */
 const lengthOfFirstWord = (sentence) => {
     //write bonus code here
-   
+
     if (sentence.length === 0) {
         return 0;
     }
@@ -155,12 +155,12 @@ const lengthOfFirstWord = (sentence) => {
 //example: "happy birthday jane"
 const lengthOfLastWord = (sentence) => {
     //write bonus code here
-   
+
     if (sentence.length === 0) {
         return 0;
     }
 
-    let count = 0;  
+    let count = 0;
     //sentence= "abc", length=3, sentence[3 - 1]=sentence[2]=c=sentence[sentence.length-1 -1]
     //           012
     for (let i = sentence.length - 1; i >= 0; i--) {//<------(start, when stop, what to visit next (next index, previous index, every other, etc))
@@ -174,7 +174,7 @@ const lengthOfLastWord = (sentence) => {
     return count;
 }
 
-console.log(count);
+// console.log(count);
 
 //console.log print length of every word
 
@@ -182,52 +182,143 @@ const text = "i am trying to figure this out"
 
 const lengthOfEveryWord = (str) => {
     let count = [];
-    let word = str.split(" ");              //use split or slice???
-    for (let i = 0; i < word.length; i++){
+    let word = str.split(" ");              //use split, slice uses indexes to specify
+    for (let i = 0; i < word.length; i++) {
         count.push(word[i].length);          //adds new items to end of an array
     }
     return count;
 }
 
-console.log(lengthOfEveryWord('i am trying to figure this out'));
+// console.log(lengthOfEveryWord('i am trying to figure this out'));
 
 
-// const lengthOfEveryWord = (sentence)=>{
-//     if (sentence.length === 0){
-//         return 0;
-//     }
+//stops: 'g' - gas station, 'r' - resturant 
+//ex: 'gggrgr' result is 6 total stops
+//assume only g and r in stop string
+// 'gg@r'
+const countAllStops = (stops) => {
+    let totalStops = 0;//the tally
+    for (let i = 0; i < stops.length; i++) {
+        //loop visits one character at a time
+        const currentChar = stops.substr(i, 1);
+        //make a tally
+        // || or, && and
+        if (currentChar === "g" || currentChar === "r") {
+            totalStops = totalStops + 1;
+        }
+    }
+    return totalStops;
+}
 
-//     let count  = 0;
+const temp = (x) => {
+    let count = 0;
+    if (x === 'g') {
+        count = count + 1;
+        console.log('its a gas station');
+    }
+    return count;
+}
+// console.log(temp('g'));
+//its a gas station
+//1
 
-//     for (let i = 0; i < sentence.length; i++){
-//         const currentChar = sentence.substr(i, 1);   //substr(where to start, how many characters to visit)
-//         if (currentChar === " ") {
-//             //end counting of current word
-//             break;
-//             count = count + 1;
 
-//             return count;
-//             //print current word count
-//             console.log(count);
-//             //start new word count - is there a different way to say this
-             
-//         }
-//     }
+const temp2 = (x) => {
+    let count = 0;
+    //this is equivalent to the below without curly braces
+    // if(x === 'g'){
+    //     count = count + 1;
+    // }
 
-// }
+    if (x === 'g')
+        count = count + 1;
+    console.log('its a gas station');
+    return count;
+}
+// console.log(temp2('r'));
+//its a gas station
+//0
+
+
+//ex: 'gggrgr' result is 4 gas stations
+const countGasStations = (gas) => {
+    let count = 0;
+    for (let i = 0; i < sentence.length; i++) {
+        //TODO: how do we update the count so we get the correct number of gas stations
+        const currentChar1 = gas.substr(i, 1);
+        if (currentChar1 === "g") {
+            count = count + 1;
+        }
+    }
+    return count;
+}
+// console.log(countGasStations('gggrgr'));
+
+//count all characters but not spaces, print the count for each word, reset count at space
+//"me"
+//"i like"
+const lengthOfEveryWord2 = (sentence) => {
+    if (sentence.length === 0) {
+        return 0;
+    }
+
+    let count = 0;//4 //the count of characters in a single word
+
+    for (let i = 0; i < sentence.length; i++) {//i=6
+        const currentChar = sentence.substr(i, 1);//i, " ", l,i,k,e  //substr(where to start, how many characters to visit)
+        if (currentChar === " ") {
+            //its a space! What do we want to do?
+
+            //print the current word length (aka count of characters)
+            console.log(count);//prints 1,
+            //reset count to 0
+            count = 0;
+
+        } else {
+            //not a space then what?
+            count = count + 1;
+        }
+    }
+    if (count > 0){
+        console.log(count);//4
+    }
+
+}
+
+// console.log(lengthOfEveryWord2('i am trying to figure this out'));
+
+
+/*
+sentence: abc test
+                  ^
+          
+count: 4
+
+["abc","test"]
+
+steps once you finish a word:
+1. print out the count // 3
+2. reset the count 0
+
+
+//if count > 0 print out current count (aka last word in sentence)
+*/
+
+
+
 
 //hints: how would we reset count for each word?
 //hints: when do we want to update the count?
 
 
-    // if (sentence.length === 0) {
-    //     return 0;
-    // }                                //use .slice to get last word, count word length
-    // let count = 0;
-    // for (let i = 0; i < sentence.length; i++) {
-    //     if
-    // }
-    // return count;
+// if (sentence.length === 0) {
+//     return 0;
+// }                                //use .slice to get last word, count word length
+// let count = 0;
+// for (let i = 0; i < sentence.length; i++) {
+//     if
+// }
+// return count;
 
 //}
 
@@ -248,17 +339,17 @@ console.log(lengthOfEveryWord('i am trying to figure this out'));
 //Extra Credit: https://leetcode.com/problems/roman-to-integer/
 //hints: use lots of if statements
 
-const(romanToInteger) => () => {
+const romanToInteger = () => {
     let array = ["I", "V", "X", "L", "C"];
     let values = {
-        I : 1,
-        V : 5,
-        X : 10,
-        L : 50, 
-        C : 100
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100
     }
 
     let sum = 0;
 
-    for (let i = )
+    // for (let i = )
 }
