@@ -63,17 +63,29 @@ const totalEventsOutside = (allEvents) => {
 console.log(totalEventsOutside(events));
 
 
-// 5. How many had a magnitude over 1.0?
-const magOverOne = (str) => {
+//*** */ 5. How many had a magnitude over 1.0?
+const magOverOne = (allEvents) => {
 
 }
 
-// 6. How many forest fires happened?
-const howManyFires = (str) => {
+//*** */ 6. How many forest fires happened?
+const howManyFires = (allEvents) => {
+    let count = 0;
+    for (let i = 0; i < allEvents.length; i++) {
+        const currentEvent = allEvents[i];
+        if (currentEvent.properties.type === forest-fire) {
+            count = count + 1;
+        }
+    }
+    return count;
 
 }
 
-// 7. How many total events?
+console.log(howManyFires(events));
+
+
+
+//*** */ 7. How many total events?
 const totalEvents = (allEvents) => {
     return allEvents.length
 
@@ -82,7 +94,7 @@ const totalEvents = (allEvents) => {
 console.log(totalEvents(events));
 
 // 8. List all events (title) that have a magnitude over 0.5 - print out the title if magnitude is over 0.5
-const magOverPointFive = (str) => {
+const magOverPointFive = (allEvents) => {
 
 }
 
@@ -102,6 +114,22 @@ const firesCalifornia = (allEvents) => {
 }
 
 console.log(firesCalifornia(events));
+
+// 10. Sort the events in ascending order by magnitude
+
+
+// 11. Sort the events in descending order by magnitude
+
+
+// 12. Sort the events in descending order by time it occurred; notes: 1689635583687 is the number of milliseconds since January 1, 1970 (known as unix epoch time)
+
+
+// 13. Find the most recent earthquake with magnitude over 0.5
+
+
+
+
+
 
 /* create a function for each question 1-9
 1. How many earthquakes happened?
@@ -127,14 +155,4 @@ console.log(firesCalifornia(events));
 //data.features[0].properties.time - gives you the time the first event occured; first is because of index 0
 
 
-//1. How many earthquakes happened?
-//Step 1: look at each event in the list
-//Step 2a: check if event's property 'type' is 'earthquake'; count earthquakes;
-//Step 2b: skip if not earthquake
 
-
-//3. How many total events in California?
-//Step 1: look at each event "place" to determine if equals to CA
-
-//4.  How many total events located outside California?
-//Set
