@@ -104,14 +104,14 @@ console.log(totalEvents(events));
 
 // 8. List all events (title) that have a magnitude over 0.5 - print out the title if magnitude is over 0.5
 const magOverPointFive = (allEvents) => {
-    let count = 0;
+    let title = ' ';
     for ( let i = 0; i < allEvents.lenth; i++) {
         const currentEvent = allEvents[i];
         if (currentEvent.properties.mag > 0.5) {
             readAsText ("title");
         }
     }
-return (currentEvent.properties.title);
+return (title);
 
 }
 console.log(magOverPointFive(events));
@@ -136,40 +136,44 @@ const firesCalifornia = (allEvents) => {
 
 console.log(firesCalifornia(events));
 
+
+
 // 10. Sort the events in ascending order by magnitude
+const magAscend = (allEvents) => {              //find magnitude in event data
+    
+        const currentEvent = allEvents[i];
+        magAscend.sort((a, b) => a - b)         //sort from lowest to highest
+        }                                   
+
+
+
+
+
 
 
 // 11. Sort the events in descending order by magnitude
+const magDescend = (allEvents) => {             //find magnitude in event data
+    magDescend.sort((a, b) => b - a)            //sort from highest to lowest
+}
 
 
 // 12. Sort the events in descending order by time it occurred; notes: 1689635583687 is the number of milliseconds since January 1, 1970 (known as unix epoch time)
+const descendTime = (allEvents) => {    //find time in event data
+                                        //sort from highest to lowest
+}
 
 
 // 13. Find the most recent earthquake with magnitude over 0.5
+const mostRecent = (allEvents) => {     //find magnitudes over 0.5
+                                        //find most recent time
+}
 
 
 
 
 
 
-/* create a function for each question 1-9
-1. How many earthquakes happened?
-2. How many tsunamis happened?
-3. How many total events in California?
-4. How many total events located outside California?
-5. How many had a magnitude over 1.0?
-6. How many forest fires happened?
-7. How many total events?
-8. List all events (title) that have a magnitude over 0.5
-9. How many forest fires in California?
-10. Sort the events in ascending order by magnitude
-11. Sort the events in descending order by magnitude
-12. Sort the events in descending order by time it occurred; notes: 1689635583687 is the number of milliseconds since January 1, 1970 (known as unix epoch time)
-13. Find the most recent earthquake with magnitude over 0.5
 
-
-
-*/
 //Accessing properties on an object
 //data - is the events summary object
 //data.features - gives you a array of events (nest property called features)
