@@ -65,15 +65,24 @@ console.log(totalEventsOutside(events));
 
 //*** */ 5. How many had a magnitude over 1.0?
 const magOverOne = (allEvents) => {
+    let count = 0;
+    for (let i = 0; i < allEvents.length; i++) {
+        const currentEvent = allEvents[i];
+        if (currentEvent.properties.mag > 1) {
+            count = count + 1;
+        }
+    }
+    return count;
 
 }
+console.log(magOverOne(events));
 
 //*** */ 6. How many forest fires happened?
 const howManyFires = (allEvents) => {
     let count = 0;
     for (let i = 0; i < allEvents.length; i++) {
         const currentEvent = allEvents[i];
-        if (currentEvent.properties.type === forest-fire) {
+        if (currentEvent.properties.type === 'forest-fire') {
             count = count + 1;
         }
     }
@@ -95,8 +104,20 @@ console.log(totalEvents(events));
 
 // 8. List all events (title) that have a magnitude over 0.5 - print out the title if magnitude is over 0.5
 const magOverPointFive = (allEvents) => {
+    let count = 0;
+    for ( let i = 0; i < allEvents.lenth; i++) {
+        const currentEvent = allEvents[i];
+        if (currentEvent.properties.mag > 0.5) {
+            readAsText ("title");
+        }
+    }
+return (currentEvent.properties.title);
 
 }
+console.log(magOverPointFive(events));
+
+//STUCK ON NUMBER 8
+
 
 // 9. How many forest fires in California?
 const firesCalifornia = (allEvents) => {
