@@ -189,7 +189,7 @@ const lengthOfEveryWord = (str) => {
     return count;
 }
 
-// console.log(lengthOfEveryWord('i am trying to figure this out'));
+ console.log(lengthOfEveryWord('i am trying to figure this out'));
 
 
 //stops: 'g' - gas station, 'r' - resturant 

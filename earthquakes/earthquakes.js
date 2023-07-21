@@ -77,7 +77,7 @@ const magOverOne = (allEvents) => {
 }
 console.log(magOverOne(events));
 
-//*** */ 6. How many forest fires happened?
+//6. How many forest fires happened?
 const howManyFires = (allEvents) => {
     let count = 0;
     for (let i = 0; i < allEvents.length; i++) {
@@ -94,7 +94,7 @@ console.log(howManyFires(events));
 
 
 
-//*** */ 7. How many total events?
+// 7. How many total events?
 const totalEvents = (allEvents) => {
     return allEvents.length
 
@@ -104,19 +104,20 @@ console.log(totalEvents(events));
 
 // 8. List all events (title) that have a magnitude over 0.5 - print out the title if magnitude is over 0.5
 const magOverPointFive = (allEvents) => {
-    let title = ' ';
-    for ( let i = 0; i < allEvents.lenth; i++) {
+    for (let i = 0; i < allEvents.length; i++) {
         const currentEvent = allEvents[i];
         if (currentEvent.properties.mag > 0.5) {
-            readAsText ("title");
+            //console log the title of the currentEvent
+            console.log(currentEvent.properties.title);
         }
     }
-return (title);
 
 }
 console.log(magOverPointFive(events));
 
-//STUCK ON NUMBER 8
+
+
+
 
 
 // 9. How many forest fires in California?
@@ -139,35 +140,76 @@ console.log(firesCalifornia(events));
 
 
 // 10. Sort the events in ascending order by magnitude
-const magAscend = (allEvents) => {              //find magnitude in event data
-    
+const magAscend = (allEvents) => {
+    //<what list are we sorting the variable name>.sort((eventA,eventB)=> <what to sort by>)
+    //sort all events - sorts in place
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    allEvents.sort((eventA, eventB) => {
+        if (eventA.properties.mag < eventB.properties.mag) {    //see problem 11 for modified version (clean)
+            return -1;
+        }
+        if (eventA.properties.mag > eventB.properties.mag) {
+            return 1;
+        }
+
+        return 0;
+    })
+    //traverse of sorted events
+    for (let i = 0; i < allEvents.length; i++) {
         const currentEvent = allEvents[i];
-        magAscend.sort((a, b) => a - b)         //sort from lowest to highest
-        }                                   
+        //title: magnitude
+        console.log(currentEvent.properties.title + ": " + currentEvent.properties.mag);
 
+    }
+}
 
-
-
-
+console.log(magAscend(events));
 
 
 // 11. Sort the events in descending order by magnitude
 const magDescend = (allEvents) => {             //find magnitude in event data
-    magDescend.sort((a, b) => b - a)            //sort from highest to lowest
+    //sort from highest to lowest
+    allEvents.sort((eventA, eventB) =>
+        eventB.properties.mag - eventA.properties.mag
+    )
+    for (let i = 0; i < allEvents.length; i++) {
+        const currentEvent = allEvents[i];
+        console.log(currentEvent.properties.title + ": " + currentEvent.properties.mag);
+    }
+
 }
+
+console.log(magDescend(events));
 
 
 // 12. Sort the events in descending order by time it occurred; notes: 1689635583687 is the number of milliseconds since January 1, 1970 (known as unix epoch time)
-const descendTime = (allEvents) => {    //find time in event data
-                                        //sort from highest to lowest
+const descendTime = (allEvents) => {
+    allEvents.sort((eventA, eventB) =>
+        eventB.properties.time - eventA.properties.time
+    )
+    for (let i = 0; i < allEvents.length; i++) {
+        const currentEvent = allEvents[i];
+        console.log(currentEvent.properties.title + ": " + currentEvent.properties.time);
+    }
+
+}
+console.log(descendTime(events));
+
+
+// 13. Find the most recent earthquake with magnitude over 0.5 - print the name of that earthquake (print 1 name and magnitude)
+const mostRecent = (allEvents) => {
+    //allEvents is already sorted desc because of the above code so no need to sort it again here
+    for (let i = 0; i < allEvents.length; i++) {
+        const currentEvent = allEvents[i];
+
+        if (currentEvent.properties.type === "earthquake" && currentEvent.properties.mag > 0.5){   //find === earthquake and > 0.5
+            console.log(currentEvent.properties.title)
+            break;
+        }
+    }
 }
 
-
-// 13. Find the most recent earthquake with magnitude over 0.5
-const mostRecent = (allEvents) => {     //find magnitudes over 0.5
-                                        //find most recent time
-}
-
+console.log(mostRecent(events));
 
 
 
@@ -178,6 +220,5 @@ const mostRecent = (allEvents) => {     //find magnitudes over 0.5
 //data - is the events summary object
 //data.features - gives you a array of events (nest property called features)
 //data.features[0].properties.time - gives you the time the first event occured; first is because of index 0
-
 
 
