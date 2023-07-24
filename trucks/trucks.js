@@ -1,5 +1,5 @@
 const data = require('./truck-data');
-const trip = data.truckloads;
+const trip = data.truckLoads;
 
 
 
@@ -7,17 +7,16 @@ const trip = data.truckloads;
 const howManyTrips = (allData) => {
     let count = 0;
     for (let i = 0; i < allData.length; i++) {
-    const currentData = allData[i];
-    count = count + 1;
-
-    return data.length
+        const currentData = allData[i];
+        if (currentData.distance > 0) {
+        count = count + 1;
+        }
+        
     }
+    return count;
 }
 
-console.log(howManyTrips(data));
-
-
-
+console.log(howManyTrips(trip));
 
 
 
@@ -27,7 +26,7 @@ const originPdx = (allData) => {
     let count = 0;
     for (let i = 0; i < allData.length; i++) {
         const currentData = allData[i];
-        if (currentData.truckloads.origin === "PDX") {
+        if (currentData.origin === "PDX") {
             count = count + 1;
         }
     }
@@ -42,7 +41,8 @@ console.log(originPdx(trip));
 const destinationSlc = (allData) => {
     let count = 0;
     for (let i = 0; i < allData.length; i++) {
-        if (currentData.truckloads.destination === "SLC" && currentData.truckloads.distance > 300) {
+        const currentData = allData[i];
+        if (currentData.destination === "SLC" && currentData.distance > 300) {
             count = count + 1;
         }
     }
@@ -58,7 +58,7 @@ const toFrom = (allData) => {
     let count = 0;
     for (let i = 0; i < allData.length; i++) {
         const currentData = allData[i];
-        if (currentData.truckloads.origin === "PHX" && currentData.truckloads.destination === "MDW") {
+        if (currentData.origin === "PHX" && currentData.destination === "MDW") {
             count = count + 1;
         }
     }
