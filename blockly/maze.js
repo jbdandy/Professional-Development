@@ -77,11 +77,13 @@ const checkIfAtDestination = (currentPosition, destination) => {
     }
 }
 
+console.log();
+
 
 //input: currentPosition = [4,5];
 //output: returns a new position of: [4,6] - returns an array of [4,6]
 const moveForward = (currentPosition) => {
-
+    
 }
 
 //currentPosition = [4,5];
