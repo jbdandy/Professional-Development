@@ -45,10 +45,10 @@ const solveEasyMaze = (maze) => {
 const solveStairMaze = (maze) => {
     const currentPosition = [0, 0];
     while (checkIfAtDestination()) {
-        moveForward()
-        turnLeft()
-        moveForward()
-        turnRight()
+        moveForward();
+        turnLeft();
+        moveForward();
+        turnRight();
     }
 
 }
@@ -83,18 +83,24 @@ console.log();
 //input: currentPosition = [4,5];
 //output: returns a new position of: [4,6] - returns an array of [4,6]
 const moveForward = (currentPosition) => {
+    const currentPosition = [4,5];
     
+
 }
 
 //currentPosition = [4,5];
 //returns a new position of: [3,5]
 const turnLeft = (currentPosition) => {
+    const currentPosition = [4,5];
+    
 
 }
 
 //currentPosition = [4,5];
 //returns a new position of: [5,5]
 const turnRight = (currentPosition) => {
+    const currentPosition = [4,5];
+    
 
 }
 
