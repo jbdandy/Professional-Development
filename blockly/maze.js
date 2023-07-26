@@ -20,10 +20,13 @@ coordinates 1,0 has a value of 4
 //maze:
 /*
 [
-[1,1,1,1],
-[0,0,0,0],
-[0,0,0,0],
+    [1,1,1,1],row=0
+    [0,0,0,0],row=1
+    [0,0,0,0],row=2
+col= 0,1,2,3
 ]
+
+coordinate: [2,3]
 
 0 = not a path, water
 1 = a path, land
@@ -37,18 +40,23 @@ const solveEasyMaze = (maze) => {
     while (checkIfAtDestination(currentPosition, destinationPositon)) {
         const newPosition = moveForward(currentPosition);
         currentPosition = newPosition;
+
+        //simplified to
+        //currentPosition = moveForward(currentPosition);
     }
-    console.log('You finished!');
+    console.log(`You finished: row: ${currentPosition[0]}, col: ${currentPosition[1]}`);
 }
 
 //TODO: Update to pass correct variables to each function
 const solveStairMaze = (maze) => {
-    const currentPosition = [0, 0];
-    while (checkIfAtDestination()) {
-        moveForward();
-        turnLeft();
-        moveForward();
-        turnRight();
+    let currentPosition = [0, 0];
+    let destination = [3,3];
+
+    while (checkIfAtDestination(currentPosition)) {
+        currentPosition = moveForward(currentPosition);
+        currentPosition = turnLeft(currentPosition);
+        currentPosition = moveForward(currentPosition);
+        currentPosition = turnRight(currentPosition);
     }
 
 }
@@ -80,27 +88,47 @@ const checkIfAtDestination = (currentPosition, destination) => {
 console.log();
 
 
-//input: currentPosition = [4,5];
-//output: returns a new position of: [4,6] - returns an array of [4,6]
+//input: currentPosition = [?,?];
+//output: returns a new position of: [?,?+1] - returns an array of [?,?]
 const moveForward = (currentPosition) => {
-    const currentPosition = [4,5];
+    const newRow = currentPosition[0];
+    const newColumn = currentPosition[1] + 1;//currentColumn + 1
     
+    return [newRow, newColumn];
 
 }
 
-//currentPosition = [4,5];
-//returns a new position of: [3,5]
+//currentPosition = [?,?];
+//returns a new position of: [?-1,?] // row is changing
 const turnLeft = (currentPosition) => {
-    const currentPosition = [4,5];
+    
+    const newRow = currentPosition[0] - 1;
+    const newColumn = currentPosition[1];
     
 
+    return [newRow, newColumn];
+    
 }
 
 //currentPosition = [4,5];
 //returns a new position of: [5,5]
 const turnRight = (currentPosition) => {
-    const currentPosition = [4,5];
+
+    const newRow = currentPosition[0] + 1;
+    const newColumn = currentPosition[1];
+
+    return [newRow, newColumn];
     
+
+}
+
+
+const moveBackward = (currentPosition)=>{
+    const newRow = currentPosition[0];
+    const newColumn = currentPosition[1] - 1;
+
+    return [newRow, newColumn];
+
 
 }
 
