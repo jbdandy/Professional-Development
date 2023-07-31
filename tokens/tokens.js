@@ -58,8 +58,7 @@ class Bank{
     this.bank.transactions.push(newTransaction);
     */
 
-    const newTransaction = new Transaction();
-    }
+    //const newTransaction = new Transaction();
 
 
 
