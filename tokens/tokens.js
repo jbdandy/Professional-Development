@@ -24,9 +24,11 @@ class Transactions{
     date;
     constructor( toPersonName, fromPersonName, amount, memo, date){
             //TODO: map the default values, see other constructors
-
-
-
+            this.toPersonName = toPersonName;
+            this.fromPersonName = fromPersonName;
+            this.amount = amount;
+            this.memo = memo;
+            this.date = date;
         }
 }
 
@@ -37,19 +39,29 @@ class Bank{
         //TODO
         //how many you want - amount
         //whos buying them - person
-
+        if(amount <= firstName.lastName.usdBalance){
+            usdBalance = usdBalance + amount
+        }else{
+            console.log("Insufficient Funds")
+        }
+    }
         //Do they have enough money to buy it
-        
         //if they have enough money give them the tokens and updated the usdBalance
-
         //if they don't have money - console log 'insufficient funds'
 
-    }
+
+
+    
     //TODO: create new transaction
     /*
     const newTransaction = newTransaction('jane','joe',4,'gold','lost bet','12/15/23')
     this.bank.transactions.push(newTransaction);
     */
+    class newTransaction{
+        
+    }
+
+
     sendUsd(amount, fromPerson, toPerson, memo){
         //TODO
         //does the person sending tokens have enough tokens to send
@@ -57,7 +69,7 @@ class Bank{
             //if they do update from person token balance and to person token balance
 
         }else{ //console log 'insufficent token balance'
-            
+            console.log("Insufficient Token Balance")
         }
 
     }
