@@ -57,9 +57,7 @@ class Bank{
     const newTransaction = newTransaction('jane','joe',4,'gold','lost bet','12/15/23')
     this.bank.transactions.push(newTransaction);
     */
-    class newTransaction{
-        
-    }
+
 
 
     sendUsd(amount, fromPerson, toPerson, memo){
