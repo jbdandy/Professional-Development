@@ -40,7 +40,7 @@ class Bank{
         //how many you want - amount
         //whos buying them - person
         if(amount <= firstName.lastName.usdBalance){
-            usdBalance = usdBalance + amount
+            usdBalance = usdBalance + amount;
         }else{
             console.log("Insufficient Funds")
         }
@@ -54,9 +54,12 @@ class Bank{
     
     //TODO: create new transaction
     /*
-    const newTransaction = newTransaction('jane','joe',4,'gold','lost bet','12/15/23')
+    const newTransaction = newTransaction('jane','joe',4,'lost bet','12/15/23')
     this.bank.transactions.push(newTransaction);
     */
+
+    const newTransaction = new Transaction();
+    }
 
 
 
