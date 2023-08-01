@@ -60,6 +60,12 @@ class Bank{
 
     const newTransaction = new Transaction(fromPerson, toPerson, amount, memo, date)
     bank.transactions.push('jane', 'joe', 4, 'lost bet', '12/15/23')
+
+
+    newTransaction(fromPerson, toPerson, amount, memo, date){
+
+    }
+    //see line 112
     
         
 
@@ -99,10 +105,12 @@ const main = ()=>{
     bank.depositUsd(4, jonDoe);
 
     //Jane sends Jon 5 gold tokens
-    bank.sendUsd( 5, janeSmith, jonDoe, 'lost bet')
+    bank.sendUsd( 5, janeSmith, jonDoe, 'lost bet');
 
     //Jane sends Jon 1 gold token
-    bank.sendUsd(1, janeSmith, jonDoe, 'burger')
+    bank.sendUsd(1, janeSmith, jonDoe, 'burger');
+
+    //bank.newTransaction('jane', 'joe', 4, 'lost bet', '12/15/23');
 
     console.log(bank.transactions);
 }
