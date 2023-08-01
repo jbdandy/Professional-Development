@@ -53,12 +53,14 @@ class Bank{
 
     
     //TODO: create new transaction
-    /*
-    const newTransaction = newTransaction('jane','joe',4,'lost bet','12/15/23')
-    this.bank.transactions.push(newTransaction);
-    */
+    
+    //const newTransaction = new Transaction('jane','joe',4,'lost bet','12/15/23')
+   //this.bank.transactions.push(newTransaction);
+    
 
-    //const newTransaction = new Transaction();
+    const newTransaction = new Transaction(fromPerson, toPerson, amount, memo, date)
+    bank.transactions.push('jane', 'joe', 4, 'lost bet', '12/15/23')
+        
 
 
 
