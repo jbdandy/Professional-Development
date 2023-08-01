@@ -60,6 +60,7 @@ class Bank{
 
     const newTransaction = new Transaction(fromPerson, toPerson, amount, memo, date)
     bank.transactions.push('jane', 'joe', 4, 'lost bet', '12/15/23')
+    
         
 
 
@@ -67,8 +68,9 @@ class Bank{
     sendUsd(amount, fromPerson, toPerson, memo){
         //TODO
         //does the person sending tokens have enough tokens to send
-        if(fromPerson.usdBalance >= amount){
+        if(amount <= fromPerson.usdBalance){
             //if they do update from person token balance and to person token balance
+            toPerson.usdbalance == toPerson.usdBalance + amount && fromPerson.usdBalance == fromPerson.usdBalance - amount;
 
         }else{ //console log 'insufficent token balance'
             console.log("Insufficient Token Balance")
