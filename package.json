@@ -1,0 +1,19 @@
+{
+  "name": "professional-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "day3-hw.js",
+  "scripts": {
+    "start": "node ./tokens/tokens.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbdandy/Professional-Development.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbdandy/Professional-Development/issues"
+  },
+  "homepage": "https://github.com/jbdandy/Professional-Development#readme"
+}
