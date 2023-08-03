@@ -6,16 +6,28 @@
 
 //creat class called plane with seats
 class planeWithSeats {
-    served = '';
-    orderInfo = '';
+    served = 1;
+    notServed = 2;
+    drinkFood = ''
     seatNumber = '';
 
 
 
     constructor(served, orderInfo, seatNumber) {
         this.served = served;
-        this.orderInfo = orderInfo;
+        this.notServed = notServed;
+        this.drinkFood = drinkFood;
         this.seatNumber = seatNumber;
+    }
+}
+
+class takeOrder {
+    food = '';
+    drink = '';
+
+    constructor(food, drink){
+        this.food = food;
+        this.drink = drink;
     }
 }
 
@@ -24,9 +36,9 @@ class seatOrders {
 
     orders = [];
 
-    takeOrder (drink, food) {
-        if (drink = "Yes") {
-            
+    takeOrder (food, drink, seatNumber) {
+        if (drink = 1) {
+
         }
     }
 }
