@@ -19,4 +19,18 @@ class planeWithSeats {
     }
 }
 
-//
+//take all seat orders
+class seatOrders {
+
+    orders = [];
+
+    takeOrder (drink, food) {
+        if (drink = "Yes") {
+            
+        }
+    }
+}
+
+//deliver all seat orders
+
+//print "Complete" when entire plan has been served
