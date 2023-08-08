@@ -52,6 +52,10 @@ class PlaneOrderingSystem {
 
     //can only serve at most 5 orders at a time
     serveOrders(){
+        for (let i = 0; i < 4; i++){
+            const serveOrders = this.orders[i];
+            if(serveOrders)
+        }
         //TODO:
     }
 
