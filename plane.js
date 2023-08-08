@@ -60,9 +60,10 @@ class PlaneOrderingSystem {
 
             }
         }
-        //TODO:
+        
     }
 
+    //TODO:
     //newOrder is an order object (instance of a class)
     addOrder(newOrder) {
         //Adds a newOrder to the orders array; add item to an array. what is the item? what is the array?
