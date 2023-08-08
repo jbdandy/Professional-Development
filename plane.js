@@ -10,39 +10,39 @@ class PlaneOrderingSystem {
 
 
     //return true or false if all orders were served
-    getServingStatus(){
+    getServingStatus() {
         //TODO:calculate if all orders have been served
-        
+
     }
 
     //returns number of orders left to serve
-    howManyLeftToServe(){
+    howManyLeftToServe() {
         //TODO: have a list of N orders; How do you know if a single order was not served? How would you count this for all orders?
         return this.orders.length - howManyOrdersWereServed()
     }
 
     //returns number of orders served
-    howManyOrdersWereServed(){
+    howManyOrdersWereServed() {
         //TODO: have a list of N orders; How do you know if a single order was served? How would you count this for all orders?
         const countOfOrdersServed = 0;    //served
         // const ordersWithoutXs = 0; //not served
-        
+
         //go one by one to see if order has an X on it
-        for (let i = 0; i < this.orders.length; i++){
+        for (let i = 0; i < this.orders.length; i++) {
             //if it does then put in X pile otherwise put in other pile
             const currentOrder = this.orders[i];//{food:'banana',drink:'coke',served:false,seatNumber:'1A'}
-            if(currentOrder.served === true){
+            if (currentOrder.served === true) {
                 countOfOrdersServed = countOfOrdersServed + 1;
                 //served
             }
             // else{
             //     ordersWithoutXs = ordersWithoutXs + 1;
             //     //not served
-                
+
             // }
 
             //if the current order is served add it to the ordersWithXs array
-            
+
             //else add it to the ordersWithoutXs
 
         }
@@ -51,18 +51,20 @@ class PlaneOrderingSystem {
     }
 
     //can only serve at most 5 orders at a time
-    serveOrders(){
-        for (let i = 0; i < 4; i++){                //determine if orders have been placed
-            const serveOrders = this.orders[i];     //if so, serve no more than 5 orders at a time
-            if(serveOrders.served === false){
-                
-            }                         //update status of order after serving to 
+    serveOrders() {
+        const serveOrders = 5;
+        for (let i = 0; i < serveOrders; i++) {
+                                                                //determine if orders have been placed
+                                                                //if so, serve no more than 5 orders at a time
+            if (currentOrder.served === false) {                  //update status of order after serving
+
+            }
         }
         //TODO:
     }
 
     //newOrder is an order object (instance of a class)
-    addOrder(newOrder){
+    addOrder(newOrder) {
         //Adds a newOrder to the orders array; add item to an array. what is the item? what is the array?
         this.orders.push(newOrder); //push() will add item to existing array
     }
@@ -72,18 +74,18 @@ class PlaneOrderingSystem {
 class Order {
     food = '';
     drink = '';
-    served=false;
-    seatNumber='';//need so we know where to deliver it
+    served = false;
+    seatNumber = '';//need so we know where to deliver it
 
     //calling constructor method looks like `new Order("banana","coke","11A")
-    constructor(food, drink, seatNumber){ //constructor is a fancy keyword that creates a block in the computers memory to store data
+    constructor(food, drink, seatNumber) { //constructor is a fancy keyword that creates a block in the computers memory to store data
         this.food = food; //sub-block, aka property; set it equal to what the caller told me to - 'banana'
         this.drink = drink;
         this.seatNumber = seatNumber;
     }
 
     //wasServed:boolean
-    updateServedStatus(wasServed){
+    updateServedStatus(wasServed) {
         this.served = wasServed;
     }
 }
@@ -95,12 +97,12 @@ class Order {
 //print "Complete" when entire plan has been served
 
 
-const main = ()=>{
+const main = () => {
 
     //initiate Plane
 
     //create a bunch of orders
-    const order1 = new Order('banana','coke','1A');//creates order
+    const order1 = new Order('banana', 'coke', '1A');//creates order
     order1.updateServedStatus(true);//updates status
 
     //serve all orders
@@ -109,13 +111,13 @@ const main = ()=>{
 
 }
 
-const ex1 = ()=>{
+const ex1 = () => {
     const count = 0;
     count = count + 1;
 }
 console.log(ex1());//?
 
-const ex2 = ()=>{
+const ex2 = () => {
     return 100;
 }
 console.log(ex2());//?
