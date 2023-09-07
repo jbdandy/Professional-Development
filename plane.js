@@ -191,7 +191,7 @@ const main = () => {
     //TODO: print out the status of plane ordering system - how many left to serve, how many served
 
 
-
+console.log()
 
 
     //TODO: serve all orders, hint: you only can serve 5 at a time, use serveOrders function and the hasAllBeenServed function, need loop of some sort
