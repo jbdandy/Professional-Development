@@ -191,14 +191,30 @@ const main = () => {
     //TODO: print out the status of plane ordering system - how many left to serve, how many served
 
 
-console.log()
 
 
     //TODO: serve all orders, hint: you only can serve 5 at a time, use serveOrders function and the hasAllBeenServed function, need loop of some sort
 
-    
+    serveAllOrders() {
+        const serveAllOrders = 5;
+        for (let i = 0; i < serveAllOrders; i++) {
+            const currentOrder = ordersNotServed[i];
+            if (currentOrder.served === false) {
+                currentOrder.updateServedStatus(true);
+            }
+        }
+    }
 
+
+
+    //newOrder is an order object (instance of a class)
+    addOrder(newOrder) {
+        //Adds a newOrder to the orders array; add item to an array. what is the item? what is the array?
+        this.orders.push(newOrder); //push() will add item to existing array
+    }
 }
+
+
 
 const ex1 = () => {
     const count = 0;
