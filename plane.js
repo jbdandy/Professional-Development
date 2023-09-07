@@ -199,7 +199,7 @@ const main = () => {
         const serveAllOrders = 5;
         for (let i = 0; i < serveAllOrders; i++) {
             const currentOrder = ordersNotServed[i];
-            if (currentOrder.served === false) {
+            if (hasBeenServed === false) {
                 currentOrder.updateServedStatus(true);
             }
         }
