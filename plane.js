@@ -185,10 +185,14 @@ const main = () => {
     plane.addOrder( new Order('orange', 'sprite', '26A'))
     plane.addOrder( new Order('orange', 'sprite', '28A'))
     
-    // plane.addOrder(order2);
+    
     
 
     //TODO: print out the status of plane ordering system - how many left to serve, how many served
+
+
+
+
 
     //TODO: serve all orders, hint: you only can serve 5 at a time, use serveOrders function and the hasAllBeenServed function, need loop of some sort
 
